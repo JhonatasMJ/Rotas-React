@@ -1,12 +1,12 @@
-import React from 'react'
-/* import { Button } from '../styles/produtosS' */
+
+import { Footer } from '../styles/footerS'
 
 const Header = () => {
   return (
-    <footer>
-        <h1>Footer</h1>
+    <Footer>
+        <p>Alguns direitos reservados</p>
 
-    </footer>
+    </Footer>
   )
 }
 

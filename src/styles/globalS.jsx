@@ -1,18 +1,23 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle} from 'styled-components';
 
 
 export const AppContainer = styled.div`
- 
+  max-width: 40rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
 `;
 
 export const Content = styled.div`
-    
+    flex: 1;
 `;
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    margin: 2rem;
+   margin: 2rem;
     font-family: Arial, Helvetica, sans-serif;
+  
   }
 
   img {
@@ -34,12 +39,16 @@ export const GlobalStyle = createGlobalStyle`
     animation: animeLeft .6s forwards;
   }
 
+ 
+
   .loading {
     width:20px;
     height: 20px;
     border-radius: 50%;
     background-color: #ccc;
     border: 10px solid #ccc;
+    border-right-color: transparent;
+    animation: loading 1s infinite;
   }
 
   @keyframes animeLeft {
@@ -48,4 +57,11 @@ export const GlobalStyle = createGlobalStyle`
       opacity: initial;
     }
   }
+
+  @keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
 `;
+
